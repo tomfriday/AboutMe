@@ -4,6 +4,7 @@ body {
     padding: 0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
+    display: none;
 }
 
 .container {
@@ -19,6 +20,11 @@ h2 {
 
 
 /*header*/
+
+.bounceInUp {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+}
 
 header img {
     width: 50px;
@@ -59,9 +65,8 @@ header img {
     font-size: 20px;
     border-radius: 50%;
     color: white;
-    background-color: rgba(0, 255, 0, 0.8);
-    border: 1px solid rgba(0, 255, 0, 0.3);
-    opacity: 0;
+    background-color: rgba(50, 50, 50, 0.8);
+    border: 1px solid rgba(20, 20, 20, 0.2);
 }
 
 .toTop {
@@ -70,6 +75,27 @@ header img {
     bottom: 40px;
     right: 40px;
     z-index: 1;
+    opacity: 0;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fadeIn {
+    animation-duration: 3s;
+}
+
+
+/* global styles for div square*/
+
+.square {
+    border: 2px solid black;
+    position: relative;
 }
 
 
@@ -80,11 +106,6 @@ header img {
     margin: 0 auto;
     margin-top: 5%;
     margin-bottom: 5%;
-}
-
-.square {
-    border: 2px solid black;
-    position: relative;
 }
 
 .aboutUs .h2-container {
@@ -155,11 +176,6 @@ header img {
     margin-bottom: 5%;
 }
 
-.WhatWeDo .square {
-    border: 2px solid black;
-    position: relative;
-}
-
 .WhatWeDo .h2-container {
     position: absolute;
     top: -2px;
@@ -210,6 +226,7 @@ header img {
 .gallery img {
     width: 100%;
     height: 100%;
+    opacity: 0.8;
 }
 
 .gallery .col-xs-3,
@@ -229,11 +246,6 @@ header img {
     margin: 0 auto;
     margin-top: 5%;
     margin-bottom: 5%;
-}
-
-.contact .square {
-    border: 2px solid black;
-    position: relative;
 }
 
 .contact .h2-container {
@@ -270,6 +282,52 @@ footer img {
 
 footer .container {
     margin-bottom: 10px
+}
+
+
+/*modal*/
+
+.modal h3 {
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.modal-content .btn {
+    color: white;
+    border-radius: 0;
+    width: 150px;
+    height: 50px;
+    background: #3c3c3c;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2.54px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+textarea {
+    margin-top: 50px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2.54px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-group {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input:hover {
+    border: 1px solid #3c3c3c;
+    border-color: #3c3c3c;
+}
+
+input:active,
+input:focus {
+    border: 1px solid #3c3c3c;
+    border-color: #3c3c3c;
+    color: #3c3c3c;
 }
 
 
