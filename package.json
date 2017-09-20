@@ -1,0 +1,17 @@
+{
+  "name": "layoutnr1",
+  "version": "1.0.0",
+  "description": "Repsonsive Layout, using boostrap, SCSS, grunt, just to learn something",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "gruntO"
+  ],
+  "author": "TomFriday",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt-contrib-sassjs": "^0.1.8"
+  }
+}

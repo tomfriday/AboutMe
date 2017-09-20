@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    letter-spacing: 8.62px;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+
+/*header*/
+
+header img {
+    width: 50px;
+    margin-top: 10%;
+}
+
+.jumbotron {
+    background-image: url(../header.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.jumbotron h1 {
+    font-size: 54px;
+    letter-spacing: 8.62px;
+    color: white;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.page-header {
+    border: none;
+}
+
+.jumbotron p {
+    margin-top: 30px;
+    color: white;
+    font-size: 16px;
+}
+
+
+/*to the top button*/
+
+.toTop span {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(0, 255, 0, 0.8);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    opacity: 0;
+}
+
+.toTop {
+    width: 100px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1;
+}
+
+
+/* About-Us section */
+
+.aboutUs p {
+    max-width: 556px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.square {
+    border: 2px solid black;
+    position: relative;
+}
+
+.aboutUs .h2-container {
+    position: absolute;
+    top: -2px;
+    border-top: 2px solid white;
+    right: 20%;
+    width: 60%;
+}
+
+.aboutUs h2 {
+    margin-top: -12px;
+}
+
+
+/*  Services Section*/
+
+.services {
+    background-image: url(../img/services.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    position: relative;
+}
+
+.services h2 {
+    margin-top: -12px;
+    color: white;
+}
+
+.services .square {
+    margin-top: 100px;
+    border: 2px solid white;
+    border-top: none;
+}
+
+.services p {
+    color: white;
+    max-width: 556px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.left-line {
+    width: 22%;
+    height: 1px;
+    border-top: 2px solid white;
+}
+
+.right-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22%;
+    height: 1px;
+    border-top: 2px solid white;
+}
+
+
+/* What We Do  Section*/
+
+.WhatWeDo p {
+    max-width: 556px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.WhatWeDo .square {
+    border: 2px solid black;
+    position: relative;
+}
+
+.WhatWeDo .h2-container {
+    position: absolute;
+    top: -2px;
+    border-top: 2px solid white;
+    right: 20%;
+    width: 60%;
+}
+
+.WhatWeDo h2 {
+    margin-top: -12px;
+    letter-spacing: 8px;
+}
+
+.design,
+.development,
+.manager {
+    margin-top: 120px;
+}
+
+.WhatWeDo p {
+    margin-top: 20px
+}
+
+
+/*gallery*/
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.photo {
+    height: 237px;
+    position: relative;
+}
+
+.gallery h1 {
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 8.95px;
+    font-size: 34px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .col-xs-3,
+.gallery .col-xs-6,
+.col {
+    margin: 0;
+    padding: 0;
+    padding-right: 6px;
+    padding-top: 6px;
+}
+
+
+/* Contact Section */
+
+.contact p {
+    max-width: 556px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.contact .square {
+    border: 2px solid black;
+    position: relative;
+}
+
+.contact .h2-container {
+    position: absolute;
+    top: -2px;
+    border-top: 2px solid white;
+    right: 20%;
+    width: 60%;
+}
+
+.contact h2 {
+    margin-top: -12px;
+    letter-spacing: 8px;
+}
+
+.contact button {
+    background: #3c3c3c;
+    width: 300px;
+    height: 50px;
+    border-radius: 0;
+    margin-bottom: 40px;
+    color: white;
+    letter-spacing: 2.54px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* footer */
+
+footer img {
+    margin-right: 10px;
+    width: 30px
+}
+
+footer .container {
+    margin-bottom: 10px
+}
+
+
+/*media queries*/
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (max-width: @screen-sm-min) {
+    ...
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (max-width: @screen-md-min) {
+    ...
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width:768px) and (max-width:1200px) {
+    .gallery h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:767px) {
+    .gallery h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .jumbotron h1 {
+        font-size: 25px;
+    }
+    .contact p,
+    .aboutUs p {
+        margin-top: 50px;
+    }
+}
