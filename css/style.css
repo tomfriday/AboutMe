@@ -37,7 +37,7 @@ header img {
 }
 
 .jumbotron {
-    background-image: url(../header.jpg);
+    background-image: url(../img/header.jpg);
     background-position: center;
     background-size: cover;
     min-height: 100vh;
