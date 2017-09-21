@@ -26,6 +26,11 @@ h2 {
     animation-duration: 5s;
 }
 
+.fadeInDown {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
 header img {
     width: 50px;
     margin-top: 10%;
