@@ -4,14 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 
@@ -88,35 +86,48 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col col-lg-3 col-md-3 col-sm-12">
-                    <div class="photo"><img src="img/gallery1.png">
-                        <h1>TOPWORKZ</h1>
+                    <div class="photo">
+                        <img src="img/gallery1.png">
+                        <div class="layer">
+                            <h1>TOPWORKZ</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="col col-lg-6 col-md-6 col-sm-6">
                     <div class="photo"><img src="img/gallery2.png">
-                        <h1>JOINT</h1>
+                        <div class="layer">
+                            <h1>JOINT</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="col col-lg-3 col-md-3 col-sm-6">
                     <div class="photo"><img src="img/gallery3.png">
-                        <h1>MARKET</h1>
+                        <div class="layer">
+                            <h1>MARKET</h1>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col col-lg-3 col-md-3 col-sm-12">
                     <div class="photo"><img src="img/gallery4.png">
-                        <h1>WORKTOP</h1>
+                        <div class="layer">
+                            <h1>WORKTOP</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="col col-lg-6 col-md-6 col-sm-6">
                     <div class="photo"><img src="img/gallery5.png">
-                        <h1>LABLE</h1>
+                        <div class="layer">
+                            <h1>LABLE</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="col col-lg-3 col-md-3 col-sm-6">
                     <div class="photo"><img src="img/gallery6.png">
-                        <h1>KYIV</h1>
+                        <div class="layer">
+                            <h1>KYIV</h1>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,7 +155,7 @@
         </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Modals -->
     <div class="modal animated bounceInDown" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -174,7 +185,22 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="imagepreview" style="width: 400px; height: 264px;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
- 
