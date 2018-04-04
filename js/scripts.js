@@ -13,53 +13,57 @@ $.fn.isInViewport = function () {
 $(function () {
     $('body').fadeIn(2200);
     $(window).scroll(function () {
-        if ($('.aboutUs').isInViewport()) {
-            $('.aboutUs').addClass('animated');
-            $('.aboutUs').addClass('fadeIn');
-            $('.aboutUs h2').addClass('animated');
+        var aboutUs = $('.aboutUs');
+        var services = $('.services');
+        var WhatWeDo = $('.WhatWeDo');
+        var gallery = $('.gallery');
+        var contact = $('.contact');
+        if (aboutUs.isInViewport()) {
+            aboutUs.addClass('animated')
+                .addClass('fadeIn');
             $('.aboutUs h2').addClass('fadeInDown');
         }
         if ($('.services').isInViewport()) {
-            $('.services').addClass('animated');
-            $('.services').addClass('fadeIn');
-            $('.services h2').addClass('animated');
+            services.addClass('animated')
+                .addClass('fadeIn')
             $('.services h2').addClass('fadeInDown');
         }
         if ($('.WhatWeDo').isInViewport()) {
-            $('.WhatWeDo').addClass('animated');
-            $('.WhatWeDo').addClass('fadeIn');
-            $('.WhatWeDo h2').addClass('animated');
-            $('.WhatWeDo h2').addClass('fadeInDown');
+            WhatWeDo.addClass('animated')
+                .addClass('fadeIn');
+            $('.WhatWeDo h2').addClass('animated')
+                .addClass('fadeInDown');
         }
         if ($('.gallery').isInViewport()) {
-            $('.gallery').addClass('animated');
-            $('.gallery').addClass('fadeIn');
+            gallery.addClass('animated')
+                .addClass('fadeIn');
 
         }
         if ($('.contact').isInViewport()) {
-            $('.contact').addClass('animated');
-            $('.contact').addClass('fadeInDown');
-            $('.contact h2').addClass('animated');
-            $('.contact h2').addClass('fadeInDown');
+            contact.addClass('animated')
+                .addClass('fadeInDown');
+            $('.contact h2').addClass('animated')
+                .addClass('fadeInDown');
         }
         var y = $(this).scrollTop();
+        var buttonToTop = $('.toTop');
         if (y > 100) {
-            $('.toTop').addClass('animated');
-            $('.toTop').addClass('bounceIn');
-            $('.toTop').removeClass('fadeOut');
-            $('.toTop').addClass('pointer');
+            buttonToTop.addClass('animated')
+                .addClass('bounceIn')
+                .removeClass('fadeOut')
+                .addClass('pointer');
         }
         if (y < 100) {
-            $('.toTop').addClass('fadeOut');
-            $('.toTop').removeClass('pointer');
+            buttonToTop.addClass('fadeOut')
+                .removeClass('pointer');
         }
     });
-    $('.toTop').click(function () {
-        $('body').animate({
-                scrollTop: 0
-            },
-            700, 'linear'
-        );
+    $(document).ready(function () {
+        $('.toTop').click(function () {
+            $(window).scrollTop(0);
+        });
+
     });
+
 
 });
