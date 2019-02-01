@@ -6,7 +6,7 @@ body {
     overflow-x: hidden;
     display: none;
 }
-
+header h2 {color:white;}
 .container {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -33,7 +33,7 @@ h2 {
 
 header img {
     width: 50px;
-    margin-top: 10%;
+    
 }
 
 .jumbotron {
@@ -54,6 +54,7 @@ header img {
 
 .page-header {
     border: none;
+    margin-top:10%
 }
 
 .jumbotron p {
@@ -62,7 +63,14 @@ header img {
     font-size: 16px;
 }
 
+header .photo img{  width: 300px;
+  height: auto;
+ transform: rotate(-90deg);
+    boder: 10px solid white;
 
+
+}
+.services h1{color:white;}
 /*to the top button*/
 
 .toTop span {
@@ -133,7 +141,7 @@ header img {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    height: 1500px;
     position: relative;
 }
 
