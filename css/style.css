@@ -17,8 +17,26 @@ h2 {
     font-weight: 700;
     font-size: 34px;
 }
+h5{
+    color:white;
+}
+.me i{
+    font-size:30px;
+    color:red;
+    margin:10px;
+}
 
-
+.me{
+   padding-left:60px;
+   display:flex;
+   justify-content: left;
+   align-items: center;
+   background-color:transparent;
+   position:absolute;
+   top:0;
+   
+   
+}
 /*header*/
 
 .bounceInUp {
