@@ -177,6 +177,119 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+
+
+
+
+
+
+const eventSlug = "tixy-event";
+
+(() => {
+  if (document.getElementById("info")) {
+    return;
+  }
+
+  const iframeContainer = document.getElementById("tixy_iframe");
+  const infoSection = document.createElement("div");
+
+  infoSection.innerHTML = `
+    <div id="loader" style="text-align: center; display: inline-block"><svg
+      width="32"
+      height="32"
+      style="animation: spin 1s linear infinite;"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8.5 1.5V4M8.5 14V16.5M16 9H13.5M3.5 9H1M13.8033 14.3033L12.2501 12.7501M4.75 5.25L3.1967 3.6967M13.8033 3.69674L12.2501 5.25M4.75 12.7501L3.19674 14.3033"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    </div>
+        `;
+  infoSection.id = "info";
+  infoSection.style.fontFamily = "Helvetica, sans-serif";
+  infoSection.style.textAlign = "center";
+  infoSection.style.padding = "16px";
+
+  if (iframeContainer) {
+    iframeContainer.append(infoSection);
+    iframeContainer.scrollIntoView({ behavior: "smooth" });
+  }
+})();
+(function (T, i, x, y, a) {
+  T.tixyapp =
+    T.tixyapp ||
+    function () {
+      [].push.apply((T.tixy = T.tixy || []), arguments);
+    };
+  T.tixySettings = { v: "1.0.0" };
+  y = i.getElementsByTagName("head")[0];
+  a = i.createElement("script");
+  a.async = true;
+  a.src = x + "?version=" + T.tixySettings.v;
+  y.appendChild(a);
+})(window, document, "https://widget-sdk.tixyapp.com/script.min-v1.0.js");
+
+window.addEventListener("message", (event) => {
+  const data = event.data;
+  if (
+    data &&
+    data.type === "TIXY" &&
+    document.getElementById("loader") &&
+    document.getElementById("tixy_iframe")
+  ) {
+    document.getElementById("loader")?.remove();
+    document
+      .getElementById("tixy_iframe")
+      .append(document.getElementById("info"));
+  }
+});
+
+tixyapp(
+  {
+    type: "SET_CONTAINER",
+    payload: "tixy_iframe",
+  },
+  {
+    type: "SET_SLUG",
+    payload: eventSlug,
+  },
+  {
+    type: "SET_LANGUAGE",
+    payload: "pl",
+  },
+  {
+    type: "SET_CURRENT_URL",
+    payload: window.location.search,
+  },
+  {
+    type: "SET_TAG_MANAGER",
+    payload: "GTM-K7JDL5N5",
+  },
+  {
+    type: "SET_PREVIEW",
+    payload: false,
+  },
+  {
+    type: "SET_STYLES",
+    payload: ".text-black { color: #000000 } .bg-white { background-color: #ffffff } .text-white { color: #ffffff } .text-tixy-50 { color: #eae5fd } .bg-tixy-300 { background-color: #957ff4 } .text-tixy-300 { color: #957ff4 } .border-tixy-500 { border-color: #654ad3 } .bg-tixy-500 { background-color: #654ad3 } .text-tixy-500 { color: #654ad3 } .border-t-tixy-800 { border-top-color: #281a66 } .bg-tixy-800 { background-color: #281a66 } .text-tixy-800 { color: #281a66 } .text-stone-600 { color: #b0adc6 } .text-stone-900 { color: #54516b } .bg-cloud-300 { background-color: #fbfbfd } .text-cloud-300 { color: #fbfbfd } ",
+  },
+  {
+    type: "SET_FONT",
+    payload: "https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&display=swap",
+  },
+);
+
+
+
+
+
 </body>
 
 </html>
