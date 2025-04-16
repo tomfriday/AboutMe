@@ -235,7 +235,7 @@ const eventSlug = "test111";
   a.async = true;
   a.src = x + "?version=" + T.tixySettings.v;
   y.appendChild(a);
-})(window, document, "https://widget-sdk.tixyapp.com/script.min-v1.0.js");
+})(window, document, "https://widget-sdk.tixyapp.com/script-dev.min-v1.0.js");
 
 window.addEventListener("message", (event) => {
   const data = event.data;
@@ -283,10 +283,9 @@ tixyapp(
   },
   {
     type: "SET_FONT",
-    payload: "https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap",
+    payload: "https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&display=swap",
   },
 );
-
 
 
 
